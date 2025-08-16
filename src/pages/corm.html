@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+   
+    <!--favicon-->
+    <link href="../../public/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+    <link href="../../public/favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="../../public/favicon/favicon.ico" rel="shortcut icon"/>
+    <link href="../../public/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <meta content="НАН ҮЧҮН ГАНА" name="apple-mobile-web-app-title"></meta>
+    <link href="../../public/favicon/site.webmanifest" rel="manifest"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href="../assets/css/corm.css" rel="stylesheet"/>
+
+    <title>Корма - НАН ҮЧҮН ГАНА</title>
+</head>
+<body>
+
+    <div class="lang-switcher" id="mobile-lang">
+        <div class="active_btn"></div>
+        <button class="btn-lang active" data-lang="ru">RU</button>
+        <button class="btn-lang" data-lang="en" >EN</button>
+    </div>
+
+<div class="page-container">
+    
+    <!-- Hero Section -->
+
+    <!-- Feed Types Section -->
+    <section class="content-section" id="feed-types">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="sectionTitleFeed">НАШИ КОРМА</h2>
+            <div class="detailed-feed-grid">
+
+                <!-- Корм для коров -->
+                <div class="detailed-feed-card animate-on-scroll">
+                    <div class="feed-card-header">
+                        <div class="feed-icon">
+                            <img alt="" src="../../public/images/cow.PNG"/>
+                        </div>
+                        <div class="feed-header-info">
+                            <h2 data-translate="кормДлякоров">Корм для коров</h2>
+                            <p data-translate="высокопитательный">Высокопитательный корм для крупного рогатого скота</p>
+                        </div>
+                        <div class="feed-price-badge" data-translate="feedprice">20 с/кг</div>
+                    </div>
+                    <div class="feed-card-body">
+                        <p class="feed-description" data-translate="feedDescription">
+                            Наш корм для коров изготавливается из тщательно отобранных и переработанных хлебобулочных
+                            изделий.
+                            Богат углеводами и содержит необходимое количество клетчатки для здорового пищеварения КРС.
+                            Идеально подходит для дополнения основного рациона и повышения молочной продуктивности.
+                        </p>
+                        <div class="feed-specifications">
+                            <div class="spec-card">
+                                <h4 data-translate="белокt">Белок</h4>
+                                <span>12-15%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="клетчатка">Клетчатка</h4>
+                                <span>8-10%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="влажность">Влажность</h4>
+                                <span>≤14%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="фасовка">Фасовка</h4>
+                                <span data-translate="r2550">25-50 кг</span>
+                            </div>
+                        </div>
+                        <ul class="benefits-list">
+                            <li data-translate="fgh1"><i class="bi bi-check-circle-fill"></i>Улучшает пищеварение и обмен веществ</li>
+                            <li data-translate="fgh2"><i class="bi bi-check-circle-fill"></i>Повышает молочную продуктивность</li>
+                            <li data-translate="fgh3"><i class="bi bi-check-circle-fill"></i>100% натуральный состав</li>
+                            <li data-translate="fgh4"><i class="bi bi-check-circle-fill"></i>Экономичная альтернaтивa дорогим кормам</li>
+                        </ul>
+                        <div class="order-section">
+                            <a href="#contact" class="btn-order-large" data-translate="btnZakaz" onclick="orderFeed('cow')">
+                                <i class="bi bi-cart-plus"></i> Заказать корм
+                            </a>
+                            <a class="btn-contact" data-translate="btnKonsul" href="#contact">
+                                <i class="bi bi-chat-dots"></i> Консультация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Корм для овец -->
+                <div class="detailed-feed-card animate-on-scroll">
+                    <div class="feed-card-header">
+                        <div class="feed-icon">
+                            <img alt="" src="../../public/images/shep.PNG"/>
+                        </div>
+                        <div class="feed-header-info">
+                            <h2 data-translate="корм2">Корм для овец</h2>
+                            <p data-translate="специально2">Специально адаптированный для мелкого рогатого скота</p>
+                        </div>
+                        <div class="feed-price-badge" data-translate="feedprice">20 с/кг</div>
+                    </div>
+                    <div class="feed-card-body">
+                        <p class="feed-description" data-translate="feedDescription2">
+                            Корм мелкой фракции, специально разработанный для овец и коз.
+                            Легко усваивается и обеспечивает животных энергией и питательными веществами.
+                            Способствует здоровому росту и развитию, улучшает качество шерсти.
+                        </p>
+                        <div class="feed-specifications">
+                            <div class="spec-card">
+                                <h4 data-translate="белокt">Белок</h4>
+                                <span>10-13%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="клетчатка">Клетчатка</h4>
+                                <span>6-8%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="влажность">Влажность</h4>
+                                <span data-translate="14">≤14%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="фасовка">Фасовка</h4>
+                                <span data-translate="t1530">15-30 кг</span>
+                            </div>
+                        </div>
+                        <ul class="benefits-list">
+                            <li data-translate="rty1"><i class="bi bi-check-circle-fill"></i>Мелкая фракция для лучшего поедания</li>
+                            <li data-translate="rty2"><i class="bi bi-check-circle-fill"></i>Улучшает качество шерсти</li>
+                            <li data-translate="rty3"><i class="bi bi-check-circle-fill"></i>Повышает репродуктивные показатели</li>
+                            <li data-translate="rty4"><i class="bi bi-check-circle-fill"></i>Подходит для всех пород овец</li>
+                        </ul>
+                        <div class="order-section">
+                            <a href="#contact" class="btn-order-large" data-translate="btnZakaz" onclick="orderFeed('sheep')">
+                                <i class="bi bi-cart-plus"></i> Заказать корм
+                            </a>
+                            <a class="btn-contact" data-translate="btnKonsul" href="#contact">
+                                <i class="bi bi-chat-dots"></i> Консультация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Корм для кур -->
+                <div class="detailed-feed-card animate-on-scroll">
+                    <div class="feed-card-header">
+                        <div class="feed-icon">
+                            <img alt="" src="../../public/images/chicken.PNG"/>
+                        </div>
+                        <div class="feed-header-info">
+                            <h2 data-translate="корм3">Корм для кур</h2>
+                            <p data-translate="идеальная6">Идеальная добавка для домашней птицы</p>
+                        </div>
+                        <div class="feed-price-badge" data-translate="feedprice">20 с/кг</div>
+                    </div>
+                    <div class="feed-card-body">
+                        <p class="feed-description" data-translate="feedDescription3">
+                            Измельченный корм из хлебных отходов, адаптированный для птицеводства.
+                            Богат углеводами и белком, необходимыми для яйценоскости и роста птицы.
+                            Отлично сочетается с зерновыми кормами и подходит для всех возрастных групп кур.
+                        </p>
+                        <div class="feed-specifications">
+                            <div class="spec-card">
+                                <h4 data-translate="белокt">Белок</h4>
+                                <span>14-16%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="клетчатка">Клетчатка</h4>
+                                <span>4-6%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="влажность">Влажность</h4>
+                                <span>≤12%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="фасовка">Фасовка</h4>
+                                <span data-translate="w525">5-25 кг</span>
+                            </div>
+                        </div>
+                        <ul class="benefits-list">
+                            <li data-translate="hjk1"><i class="bi bi-check-circle-fill"></i>Повышает яйценоскость на 15-20%</li>
+                            <li data-translate="hjk2"><i class="bi bi-check-circle-fill"></i>Улучшает качество яичной скорлупы</li>
+                            <li data-translate="hjk3"><i class="bi bi-check-circle-fill"></i>Ускоряет рост молодняка</li>
+                            <li data-translate="hjk4"><i class="bi bi-check-circle-fill"></i>Легко дозируется и смешивается</li>
+                        </ul>
+                        <div class="order-section">
+                            <a href="#contact" class="btn-order-large" data-translate="btnZakaz" onclick="orderFeed('chicken')">
+                                <i class="bi bi-cart-plus"></i> Заказать корм
+                            </a>
+                            <a class="btn-contact" data-translate="btnKonsul" href="#contact">
+                                <i class="bi bi-chat-dots"></i> Консультация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Корм для рыб -->
+                <div class="detailed-feed-card animate-on-scroll">
+                    <div class="feed-card-header">
+                        <div class="feed-icon">
+                            <img alt="" src="../../public/images/fish.PNG"/>
+                        </div>
+                        <div class="feed-header-info">
+                            <h2 data-translate="корм4">Корм для рыб</h2>
+                            <p data-translate="специально66">Специально для рыбоводческих хозяйств</p>
+                        </div>
+                        <div class="feed-price-badge" data-translate="feedprice">20 с/кг</div>
+                    </div>
+                    <div class="feed-card-body">
+                        <p class="feed-description" data-translate="feedDescription4">
+                            Гранулированный корм, разработанный специально для рыбоводства.
+                            Хорошо растворяется в воде, не загрязняя водоем.
+                            Подходит для различных видов рыб и способствует их активному росту и развитию.
+                        </p>
+                        <div class="feed-specifications">
+                            <div class="spec-card">
+                                <h4 data-translate="белокt">Белок</h4>
+                                <span>16-18%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="жиры">Жиры</h4>
+                                <span>3-5%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="влажность">Влажность</h4>
+                                <span>≤10%</span>
+                            </div>
+                            <div class="spec-card">
+                                <h4 data-translate="фасовка">Фасовка</h4>
+                                <span data-translate="g1040">10-40 кг</span>
+                            </div>
+                        </div>
+                        <ul class="benefits-list">
+                            <li data-translate="bgd1"><i class="bi bi-check-circle-fill"></i>Не загрязняет воду</li>
+                            <li data-translate="bgd2"><i class="bi bi-check-circle-fill"></i>Быстро усваивается рыбой</li>
+                            <li data-translate="bgd3"><i class="bi bi-check-circle-fill"></i>Стимулирует рост и набор веса</li>
+                            <li data-translate="bgd4"><i class="bi bi-check-circle-fill"></i>Подходит для всех видов рыб</li>
+                        </ul>
+                        <div class="order-section">
+                            <a href="#contact" class="btn-order-large" data-translate="btnZakaz">
+                                <i class="bi bi-cart-plus"></i> Заказать корм
+                            </a>
+                            <a class="btn-contact" data-translate="btnKonsul" href="#contact">
+                                <i class="bi bi-chat-dots"></i> Консультация
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll" data-translate="sectionGitle">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+            <div class="faq-item animate-on-scroll">
+                <button class="faq-question" data-translate="faqQuestion1" onclick="toggleFaq(this)">
+                    Безопасен ли корм из хлебных отходов для животных?
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="да1">Да, наш корм абсолютно безопасен. Мы тщательно сортируем все поступающие
+                        хлебобулочные изделия, удаляя непригодные продукты. Корм проходит термическую обработку и
+                        соответствует всем ветеринарным требованиям.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <button class="faq-question" data-translate="faqQuestion2" onclick="toggleFaq(this)">
+                    Какой срок хранения у корма?
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="при4">При соблюдении условий хранения (сухое, прохладное место) корм сохраняет
+                        свои свойства до 6 месяцев. Рекомендуем хранить в герметичной таре для защиты от влаги и
+                        грызунов.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <button class="faq-question" data-translate="faqQuestion3" onclick="toggleFaq(this)">
+                    Как правильно дозировать корм?
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="дозировка4">Дозировка зависит от вида и веса животного. Для коров: 2-3 кг в день,
+                        для овец: 0.5-1 кг, для кур: 50-80г на голову. Рекомендуем постепенно вводить в рацион, начиная
+                        с 25% от общей нормы.</p>
+                </div>
+            </div>
+            <div class="faq-item animate-on-scroll">
+                <button class="faq-question" data-translate="faqQuestion4" onclick="toggleFaq(this)">
+                    Возможна ли доставка корма?
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="да9">Да, мы осуществляем доставку по Бишкеку и области. Минимальный заказ для
+                        бесплатной доставки - 500 кг. При меньших объемах стоимость доставки рассчитывается
+                        индивидуально.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact CTA Section -->
+    <section class="contact-cta" id="contact">
+        <div class="container">
+            <h2 data-translate="готовы6">Готовы заказать корм?</h2>
+            <p data-translate="свяжитесь5">Свяжитесь с нами для консультации и размещения заказа</p>
+            <div class="contact-buttons">
+                <a class="btn-whatsapp"
+                    data-translate="gg43"
+                    href="https://api.whatsapp.com/send/?phone=%2B996703889954&amp;text=Здравствуйте!%20Меня%20интересует%20заказ%20корма&amp;type=phone_number&amp;app_absent=0">
+                    <i class="bi bi-whatsapp"></i> Написать в WhatsApp
+                </a>
+                <a class="btn-phone" data-translate="pp33" href="tel:+996703889954">
+                    <i class="bi bi-telephone"></i> Позвонить: +996 703 889 954
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/corm.js"></script>   
+</body>
+</html>

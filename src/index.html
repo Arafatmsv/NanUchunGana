@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+    <!--favicon-->
+    <link href="../public/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+    <link href="../public/favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+    <link href="../public/favicon/favicon.ico" rel="shortcut icon"/>
+    <link href="../public/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <meta content="НАН ҮЧҮН ГАНА" name="apple-mobile-web-app-title">
+    <link href="../public/favicon/site.webmanifest" rel="manifest"/>
+    <link href="favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+
+    <!--CSS-->
+    <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet"/>
+    <link href="./assets/css/global.css" rel="stylesheet"/>
+
+    <!--map-->
+    <link href="https://unpkg.com/leaflet/dist/leaflet.css" rel="stylesheet">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+    <title>НАН ҮЧҮН ГАНА проект - по сбору хлеба</title>
+
+</head>
+<body>
+
+<!-- Floating particles background -->
+<div class="particles-container">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a class="nav-link" data-translate="headerAbout" href="#about">О проекте</a></li>
+                <li><a class="nav-link" data-translate="headerAdresses"
+                                               href="#locations">Адреса</a></li>
+                <li class="nav-logo-container">
+                    <div class="nav-brand-center">
+                        <img alt="Логотип НАН ҮЧҮН ГАНА" class="logo-center" src="../public/images/logo.png"/>
+                        <div class="logo-glow"></div>
+                    </div>
+                </li>
+                <li><a class="nav-link" data-translate="headerFeed" href="#feed">Корма</a></li>
+                <li><a class="nav-link" data-translate="headerContact" href="#contact">Контакты</a></li>
+            </ul>
+            <div id="google_translate_element" style="display:none;"></div> <!-- Скрытый виджет -->
+            <div class="lang-switcher">
+                <div class="active_btn"></div>
+                <button class="btn-lang active" data-lang="ru">RU</button>
+                <button class="btn-lang" data-lang="en">EN</button>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="lang-switcher" id="mobile-lang">
+    <div class="active_btn"></div>
+    <button class="btn-lang active" data-lang="ru">RU</button>
+    <button class="btn-lang" data-lang="en" >EN</button>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background">
+    </div>
+    <div class="hero-content">
+        <div class="hero-badge" data-translate="heroBadge">Вторая жизнь хлеба</div>
+        <h1 class="hero-title">
+            <span class="title-line">НАН ҮЧҮН</span>
+            <span class="title-line gradient-text">ГАНА</span>
+        </h1>
+        <p class="hero-subtitle" data-translate="heroSubtitle">Мы даём вторую жизнь хлебу и бакам. Баки из томатных цехов
+            превращаются в точки сбора хлеба, а хлеб — в полезный корм для животных.</p>
+        <div class="hero-cta">
+            <a class="cta-button primary-btn" href="#about">
+                <span data-translate="узнать">Узнать больше</span>
+                <i class="bi bi-arrow-down"></i>
+            </a>
+            <a class="cta-button secondary-btn" href="https://youtu.be/fQoVpWRafy4?si=NY0zemURymaDogje" target="_blank">
+                <i class="bi bi-play-circle"></i>
+                <span data-translate="смотреть">Смотреть видео</span>
+            </a>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-card">
+            <div class="about-header">
+                <div class="about-logo">
+                    <img alt="Логотип" src="../public/images/logo.png"/>
+                    <div class="logo-pulse"></div>
+                </div>
+                <h2 class="about-title" data-translate="aboutTitle">Наша миссия</h2>
+            </div>
+            <div class="about-description">
+                <p data-translate="наш">Наш проект направлен на сокращение хлебобулочных отходов, путём установки
+                    специальных бочек для его сбора. После наполненности бака, сотрудники «Тазалык» или бенефициар
+                    собирают хлеб и доставляют его в цех. Там он проходит этапы сортировки, дробления, грануляции при 90
+                    градусах, превращаясь в экологический и экономический комбикорм для скота.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stats-left">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-1-circle"></i>
+                        </div>
+                        <div class="stat-heading" data-translate="statHeading">Сбор сырья</div>
+                        <div class="stat-label" data-translate="statLabel">Хлебобулочные остатки сортируются и
+                            подготавливаются к переработке
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-2-circle"></i>
+                        </div>
+                        <div class="stat-heading" data-translate="statHeading2" z="">Подготовка</div>
+                        <div class="stat-label" data-translate="statLabel2">Сырьё измельчается и проходит термообработку
+                            при 90 °C
+                        </div>
+                    </div>
+                </div>
+                <div class="stats-center">
+                    <img alt="Бочка" src="../public/images/q.jpg"/>
+                    <p class="process-label" data-translate="processLabel">Процесс переработки</p>
+                </div>
+                <div class="stats-right">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-3-circle"></i>
+                        </div>
+                        <div class="stat-heading" data-translate="statHeading3">Гранулирование</div>
+                        <div class="stat-label" data-translate="statLabel3">Измельчённый продукт прессуется в гранулы
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-4-circle"></i>
+                        </div>
+                        <div class="stat-heading" data-translate="statHeading4">Готовый корм</div>
+                        <div class="stat-label" data-translate="statLabel4">Получается питательный продукт для
+                            сельхозживотных.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Locations Section -->
+<section class="locations" id="locations">
+    <div class="container">
+        <h2 class="section-title" data-translate="sectionTitlew">Адреса точек сбора</h2>
+        <div class="location-stats">
+            <div class="location-stat">
+                <div class="stat-icon">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <div class="stat-content">
+                    <h3 data-translate="p638">638 бочек</h3>
+                    <p data-translate="по">по всему Кыргызстану</p>
+                </div>
+            </div>
+            <div class="location-stat">
+                <div class="stat-icon">
+                    <i class="bi bi-building"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <div class="stat-content">
+                    <h3 data-translate="p6">6 городов</h3>
+                    <p data-translate="участвуют">участвуют в сборе</p>
+                </div>
+            </div>
+            <div class="location-stat">
+                <div class="stat-icon">
+                    <i class="bi bi-shield-check"></i>
+                    <div class="icon-glow"></div>
+                </div>
+                <div class="stat-content">
+                    <h3 data-translate="p12">12 000+ кг</h3>
+                    <p data-translate="хлеба">хлеба спасено за год</p>
+                </div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div class="opacity" id="map"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Feed Section -->
+<section class="feed" id="feed">
+    <div class="container">
+        <h2 class="section-title" data-translate="sectionTitle2">Наши корма</h2>
+        <div class="feed-content">
+                <div class="feed-image">
+                    <section class="feed-slider">
+                        <!-- Фон -->
+                        <div class="feed-bg"></div>
+                      
+                        <!-- Контент -->
+                        <div class="feed-cont">
+                          <!-- Слайды -->
+                          <div class="feed-slide active">
+                            <img src="../public/images/feed3.PNG" alt="Корм" class="feed-img">
+                            <div class="feed-text">
+                              <h2 data-translate="fff1">Корм для коров</h2>
+                              <p data-translate="ddd1">Высокопитательный корм для крупного рогатого скота</p>
+                            </div>
+                          </div>
+                      
+                          <div class="feed-slide">
+                            <img src="../public/images/feed1.PNG" alt="Корм" class="feed-img">
+                            <div class="feed-text">
+                              <h2 data-translate="fff2">Корм для овец</h2>
+                              <p data-translate="ddd2">Специально адаптированный для мелкого рогатого скота</p>
+                            </div>
+                          </div>
+                      
+                          <div class="feed-slide">
+                            <img src="../public/images/feed2.PNG" alt="Корм" class="feed-img">
+                            <div class="feed-text">
+                              <h2 data-translate="fff3">Смесь для птицы</h2>
+                              <p data-translate="ddd3">Специальный сбалансированный корм для кур, уток и другой птицы</p>
+                            </div>
+                          </div>
+                          <div class="feed-slide">
+                            <img src="../public/images/feed4.PNG" alt="Корм" class="feed-img">
+                            <div class="feed-text">
+                              <h2 data-translate="fff4">Корм для рыб</h2>
+                              <p data-translate="ddd4">Специально для рыбоводческих хозяйств</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                </div>
+            <div class="feed-info">
+                <div class="feed-header">
+                    <h3 data-translate="качественный">Качественный комбикорм для животных</h3>
+                    <div class="price-tag">
+                        <span class="price" data-translate="price">20 сом</span>
+                        <span class="per-kg" data-translate="perKg">/кг</span>
+                    </div>
+                </div>
+                <p data-translate="из">Из переработанного хлеба мы производим качественный комбикорм для скота. Наш корм
+                    богат питательными веществами и является экологически чистой альтернативой традиционным кормам.</p>
+                <div class="feed-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4 data-translate="высокое2">Высокое качество питательных веществ</h4>
+                            <p data-translate="богат">Богат белками, углеводами и витаминами</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="bi bi-leaf"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4 data-translate="экологически">Экологически чистый продукт</h4>
+                            <p data-translate="без">Без химических добавок и консервантов</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="bi bi-wallet"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4 data-translate="доступная">Доступная цена - 20 сом/кг</h4>
+                            <p data-translate="на">На 30% дешевле традиционных кормов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed-actions">
+                    <a href="./pages/corm.html" target="_blank">
+                        <button class="feed-btn primary">
+                            <i class="bi bi-eye"></i>
+                            <span data-translate="посмотреть">Посмотреть все</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-header">
+                    <h2 data-translate="хотите">Хотите сотрудничать?</h2>
+                    <div class="contact-decoration"></div>
+                </div>
+                <p data-translate="свяжитесь">Свяжитесь с нами для получения дополнительной информации о проекте или для
+                    обсуждения возможностей сотрудничества.</p>
+                <div class="contact-methods">
+                    <a class="contact-method" href="tel:+996703889954">
+                        <div class="method-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div class="method-content">
+                            <span class="method-label" data-translate="methodLabel">Телефон</span>
+                            <span class="method-value">+996 703 889 954</span>
+                        </div>
+                    </a>
+                    <a class="contact-method" href="https://www.instagram.com/_enactus_keu" target="_blank">
+                        <div class="method-icon">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+                        <div class="method-content">
+                            <span class="method-label">Instagram</span>
+                            <span class="method-value">@enactus_keu</span>
+                        </div>
+                    </a>
+                    <a class="contact-method" href="https://api.whatsapp.com/send/?phone=%2B996703889954"
+                       target="_blank">
+                        <div class="method-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <div class="method-content">
+                            <span class="method-label">WhatsApp</span>
+                            <span class="method-value" data-translate="methodValue">Написать сообщение</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-header">
+                        <h3 data-translate="оставитьЗаявку">Оставить заявку</h3>
+                        <p data-translate="мыОтветим">Мы ответим в течение 24 часов</p>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="вашеИмя" for="name">Ваше имя</label>
+                        <input id="name" name="name" required="" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="номерТел" for="phone">Номер телефона</label>
+                        <input id="phone" name="phone" required="" type="tel"/>
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="сообщениеНеоб" for="message">Сообщение (необязательно)</label>
+                        <textarea id="message" name="message" placeholder="Расскажите о ваших потребностях..."
+                                  rows="4"></textarea>
+                    </div>
+                    <button class="submit-btn" type="submit">
+                        <span class="btn-text" data-translate="btnText">Отправить заявку</span>
+                        <span class="btn-icon"><i class="bi bi-arrow-right"></i></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="partners">
+    <div class="container">
+        <h2 class="section-title" data-translate="sectionTitle3">Наши партнеры</h2>
+        <div class="partners-slider">
+            <div class="partners-track">
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Тазалык" src="../public/images/партнеры/тазалык.png"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName1">Тазалык</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Блок питания" src="../public/images/партнеры/блок_пит.png"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName2">Блок питания</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Лесной" src="../public/images/партнеры/лесной.jpg"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName3">Лесной</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Ants Coffee" src="../public/images/партнеры/антс.jpg"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName4">Ants Coffee</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Мерия Бишкек" src="../public/images/партнеры/мэрия.jpg"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName5">Мерия Бишкек</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Мерия Ысык-Кол" src="../public/images/партнеры/мерия иссык.png"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName6">Мерия Ысык-Кол</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Мерия Ысык-Кол" src="../public/images/партнеры/мэрия ош.png"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName7">Мерия Ош</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Мерия Ысык-Кол" src="../public/images/партнеры/мэрия талас.png"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName8">Мерия Талас</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img alt="Мерия Ысык-Кол" src="../public/images/партнеры/мэрия токмок.jpg"/>
+                        <div class="partner-glow"></div>
+                    </div>
+                    <span class="partner-name" data-translate="partnerName9">Мерия Токмок</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Footer-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img alt="Логотип" class="footer-logo" src="../public/favicon/favicon-96x96.png"/>
+                <h3 data-translate="нан">НАН ҮЧҮН ГАНА</h3>
+                <p data-translate="втораяЖизнь">Вторая жизнь для хлеба</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 data-translate="навигация">Навигация</h4>
+                    <ul>
+                        <li><a data-translate="headerAbout" href="#about">О проекте</a></li>
+                        <li><a data-translate="headerAdresses" href="#locations">Адреса</a></li>
+                        <li><a data-translate="headerFeed" href="#feed">Корма</a></li>
+                        <li><a data-translate="headerContact" href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-translate="headerContact">Контакты</h4>
+                    <ul>
+                        <li><a href="tel:+996703889954">+996 703 889 954</a></li>
+                        <li><a href="mailto:enactuskeu@gmail.com">enactuskeu@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-translate="социальные">Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/_enactus_keu" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=%2B996703889954" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 НАН ҮЧҮН ГАНА. <span Все права защищены.>Все права защищены.</span></p>
+        </div>
+    </div>
+</footer>
+<!--JS-->
+<script src="./assets/js/lang.js"></script>
+<script src="./assets/js/map.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
